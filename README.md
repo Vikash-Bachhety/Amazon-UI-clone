@@ -13,7 +13,7 @@ Welcome to my GitHub repository for an Amazon E-commerce website replica! This p
 
 ## Demo
 
-You can check out a live demo of the website 
+You can check out a live demo of the website here "https://amazon-replica-gamma.vercel.app/"
 
 ## Getting Started
 
