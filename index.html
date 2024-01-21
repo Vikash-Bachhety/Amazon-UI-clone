@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Favicon.jpg" type="image/x-icon">
+    <title>Amazon.in: Online Shopping India - Buy mobiles, laptops, cameras, books, watches, apparel, shoes and e-Gift
+        Cards. Free Shipping &amp; Cash on Delivery Available.
+    </title>
+
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: max-content;
+            position: relative;
+        }
+
+        header {
+            border: 2px solid;
+            height: 80vh;
+            width: auto;
+            overflow: hidden;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            background-color: #131921;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        #logo img {
+            padding: 35px;
+            height: 50px;
+            width: 160px;
+            object-fit: cover;
+            object-position: center;
+            background-color: #131921;
+            cursor: pointer;
+            color: rgb(246, 255, 246);
+        }
+
+        .search a {
+            font-size: 14px;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            padding: 5px;
+            margin-right: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .search input {
+            padding: 12px;
+            border: 3px solid #ffb803;
+            border-left: none;
+            font-size: 16px;
+            text-decoration: solid;
+            color: #a6a6a6;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 40px;
+            width: 700px;
+        }
+
+        .search img {
+            height: 40px;
+            border-radius: 2px;
+            align-self: center;
+            background-color: #fdc332;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        nav {
+            position: relative;
+            width: auto;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #232f3e;
+        }
+
+        ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        ul li a {
+            padding: 2px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 500;
+        }
+
+        #inputchecklist {
+            height: 40px;
+            width: 55px;
+            padding: 6px;
+            background-color: rgb(237, 233, 233);
+            color: rgb(0, 0, 0);
+            border: none;
+            font-size: 13px;
+            border: 3px solid #ffb803;
+            border-right: none;
+            text-align: center;
+        }
+
+        #inputchecklist option {
+            font-size: 15px;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #000000;
+            background-color: white;
+        }
+
+        .scrollImages {
+            margin: 0px 10px;
+            height: 360px;
+            width: 1460px;
+            background-color: white;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            height: 360px;
+            width: 1460px;
+        }
+
+        .scrollImages img {
+            margin-right: 20px;
+            height: 360px;
+            width: 1460px;
+            cursor: pointer;
+        }
+
+        .slide-container {
+            position: relative;
+            width: auto;
+            height: 35vh;
+        }
+
+        .slide {
+            display: none;
+            width: 1505px;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .arrow {
+            background-color: transparent;
+            position: absolute;
+            top: 30%;
+            color: white;
+            font-size: 45px;
+            font-weight: 900;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .right {
+            right: 0px;
+        }
+
+        main {
+            position: absolute;
+            top: 50vh;
+            background-color: rgb(227, 227, 227);
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 390px;
+            width: auto;
+            margin-bottom: 30px;
+        }
+
+        section .container {
+            margin: 0px 10px;
+            height: 360px;
+            width: 320px;
+            background-color: white;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-align: left;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        #innerContainer {
+            margin-top: 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 340px;
+            width: 155px;
+            font-size: 12px;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            gap: 10px;
+            color: #585858;
+        }
+
+        #innercontainer div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+            height: 100px;
+            width: 155px;
+        }
+
+        #innerContainer img {
+            height: 100px;
+            width: 150px;
+            object-fit: cover;
+            object-position: center;
+            cursor: pointer;
+        }
+
+        #inner-Container img {
+            margin-top: 10px;
+            height: 300px;
+            width: 310px;
+            object-fit: cover;
+            object-position: center;
+            cursor: pointer;
+        }
+
+        .text a {
+            position: absolute;
+            text-align: left;
+            left: 0;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 13px;
+            color: #007185;
+            cursor: pointer;
+        }
+
+        #inner-Container .text1 a {
+            text-align: left;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 13px;
+            color: #007185;
+            cursor: pointer;
+        }
+
+        #btn-img img {
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .container button {
+            margin: 20px 0px 0px 10px;
+            width: 300px;
+            height: 30px;
+            border-radius: 15px;
+            border: 0.5px solid #c35b00;
+            background-color: #fdc332;
+            text-shadow: 0 1px 0 #ffe093;
+            cursor: pointer;
+        }
+
+        .container button:hover {
+            background-color: #ffcb48;
+        }
+
+        .box {
+            margin: 0px 10px;
+            height: 360px;
+            width: 100%;
+            background-color: white;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            text-align: left;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .box img {
+            height: 360px;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+            cursor: pointer;
+        }
+
+        .box .text1 a {
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 35px;
+            color: #007185;
+            cursor: pointer;
+        }
+
+        .inner-Containers {
+            margin-top: 20px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+
+        }
+
+        .inner-Containers div {
+            padding: 22px;
+            height: 320px;
+            width: 195px;
+        }
+
+        .inner-Containers div img {
+            height: auto;
+            width: auto;
+            cursor: pointer;
+        }
+
+        .inner-Containers div p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: left;
+            margin-top: 10px;
+            width: 100%;
+            text-decoration: none;
+            font-size: 13px;
+            color: #000000;
+
+        }
+
+        .inner-Containers div span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .inner-Containers div span p {
+            height: 20px;
+            width: 90px;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding-top: 5px;
+            background-color: #CC0C39;
+            font-size: 12px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        footer {
+            height: 150vh;
+            width: auto;
+            margin: 0px 10px;
+        }
+
+        .one {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: white;
+        }
+
+        .one p {
+            font-size: 13px;
+        }
+
+        .one button {
+            margin: 5px 0px 5px 10px;
+            width: 250px;
+            height: 25px;
+            border-radius: 5px;
+            border: 0.5px solid #c35b00;
+            background-color: #fdc332;
+            text-shadow: 0 1px 0 #ffe093;
+            color: black;
+            cursor: pointer;
+        }
+
+        .one button:hover {
+            background-color: #ffcb48;
+        }
+
+
+        .two {
+            height: 50px;
+            border: 1px solid;
+            background-color: #414d5c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .two a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+        }
+
+        .three {
+            display: flex;
+            height: 45vh;
+            gap: 55px;
+            background-color: #232F3E;
+            justify-content: center;
+        }
+
+        .three ul {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+
+        .three ul li a {
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(192, 192, 192);
+            cursor: pointer;
+        }
+
+        #footerSection {
+            position: relative;
+            display: flex;
+            gap: 45px;
+            justify-content: center;
+            flex-direction: column;
+            height: 250px;
+            background-color: #232F3E;
+        }
+
+        #footerSection select {
+            border: 1px solid white;
+            background-color: #232F3E;
+            color: white;
+            height: 35px;
+            width: 90px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        #footerSection ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            width: 880px;
+            overflow: hidden;
+        }
+
+        #footerSection ul li a {
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        #contact {
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: -30px;
+            justify-content: center;
+            align-items: center;
+            background-color: #131A22;
+        }
+
+        #contact #services {
+            width: 800px;
+            margin-top: 20px;
+            display: flex;
+            text-align: justify;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        #contact ul {
+            width: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+        }
+
+        #contact ul li a {
+            cursor: pointer;
+            font-size: 12px;
+            color: rgb(192, 192, 192);
+        }
+
+        #links {
+            width: 400px;
+            margin: 40px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #links a {
+            text-decoration: none;
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            margin: 5px 10px;
+        }
+
+        #side-bar {
+            height: 600px;
+            width: 400px;
+            border: 1px solid;
+            background-color: white;
+        }
+
+        .lang {
+            width: 40px;
+            background-color: #131921;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            border: none;
+            font-weight: 700;
+            color: white;
+        }
+
+        #main {
+            height: 100vh;
+            position: absolute;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-margin: 10px;
+            top: 0;
+            z-index: 5;
+            width: 360px;
+            background-color: white;
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        #main::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        #main::-webkit-scrollbar-thumb {
+            background-color: #c35b00;
+            border-radius: 50%;
+        }
+
+        #main::-webkit-scrollbar-track {
+            background-color: rgb(0, 0, 0);
+            width: 5px;
+            border-radius: 50%;
+        }
+
+        #main div {
+            position: sticky;
+            z-index: 10;
+            top: 0;
+            width: 360px;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            background-color: #232f3e;
+
+        }
+
+        #main div img {
+            height: 22px;
+            width: 22px;
+            margin-left: 35px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 1px;
+        }
+
+        #main div p {
+            margin-left: 10px;
+            color: rgb(255, 255, 255);
+            font-size: 19px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #main div span {
+            font-size: 24px;
+            position: absolute;
+            left: 300px;
+            margin-left: 20px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+
+        #main ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            white-space: nowrap;
+            margin: 10px 0px 30px 35px;
+        }
+
+        #main ul li a {
+            color: #111;
+            font-size: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="main">
+            <div>
+                <a href="Signin.html"><img src="images/user.png" alt=""></a>
+                <p>Hello, sign in</p>
+                <span id="close">&#10539</span>
+            </div>
+            <ul>
+                <li><a href="#">
+                        <h2>Trending</h2>
+                    </a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">New Releases</a></li>
+                <li><a href="#">Movers and Shakers</a></li>
+                <hr>
+                <li><a href="#">
+                        <h2>Digital Content And Devices</h2>
+                    </a></li>
+                <li><a href="#">Amazon miniTV- FREE entertainment</a></li>
+                <li><a href="#">Echo & Alexa</a></li>
+                <li><a href="#">Fire TV</a></li>
+                <li><a href="#">Kindle E-Readers & eBooks</a></li>
+                <li><a href="#">Audible Audiobooks</a></li>
+                <li><a href="#">Amazon Prime Video</a></li>
+                <li><a href="#"> Amazon Prime Music</a></li>
+                <hr>
+                <li><a href="#">
+                        <h2>Shop By Category</h2>
+                    </a></li>
+                <li><a href="#">TV, Appliances, Electronics</a></li>
+                <li><a href="#">Men's Fashion</a></li>
+                <li><a href="#">Women's Fashion</a></li>
+                <li><a href="#">See All</a></li>
+                <hr>
+                <li><a href="#">
+                        <h2>Programs & Features</h2>
+                    </a></li>
+                <li><a href="#">Gift Cards & Mobile Recharges</a></li>
+                <li><a href="#">Amazon Launchpad</a></li>
+                <li><a href="#">Handloom and Handicrafts</a></li>
+                <li><a href="#">See All</a></li>
+                <hr>
+                <li><a href="#">
+                        <h2>Help & Settings</h2>
+                    </a></li>
+                <li><a href="#">Your Account</a></li>
+                <li><a href="#">Customer Service</a></li>
+                <li><a href="Signin.html">Sign in</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <div id="logo"><img src="images/logo.png" alt=""></div>
+            <a href="#">
+                <p>Update location</p>
+            </a>
+            <select id="inputchecklist" class="lang" name="option" id="option">
+                <option value="language">All Categories</option>
+                <option value="language">Alexa skills </option>
+                <option value="language">Amazon devices </option>
+                <option value="language">Amazon fashion </option>
+                <option value="language">Amazon pharmacy </option>
+                <option value="language">Appliances</option>
+                <option value="language">Apps and Games</option>
+                <option value="language">Audible Audi books</option>
+                <option value="language">Baby</option>
+                <option value="language">Beauty</option>
+                <option value="language">Books</option>
+                <option value="language">Car and Motorbike</option>
+                <option value="language">Clothing and Accessories </option>
+                <option value="language">Collectibles </option>
+                <option value="language">Computers and Accessories</option>
+                <option value="language">Electronics </option>
+                <option value="language">Furniture </option>
+                <option value="language">Garden and Outdoors </option>
+                <option value="language">Gift cards</option>
+                <option value="language">Grocery and Gourmet Food </option>
+                <option value="language">Health and Personal care</option>
+                <option value="language">Home and Kitchen</option>
+                <option value="language">Industrial and Scientific </option>
+                <option value="language">Jewellery</option>
+                <option value="language">Kindle Store </option>
+                <option value="language">Luggage and Bags </option>
+            </select>
+            <input id="input" type="search" placeholder="Search Amazon.in">
+            <img src="images/search.png" alt="">
+            <select class="lang" name="option" id="option">
+                <option value="language">English - EN</option>
+                <option value="language">हिन्दी - HI - अनुवाद</option>
+                <option value="language">தமிழ் - TA - மொழிபெயர்ப்பு</option>
+                <option value="language">తెలుగు - TE - అనువాదం</option>
+                <option value="language">ಕನ್ನಡ - KN - ಭಾಷಾಂತರ</option>
+                <option value="language">മലയാളം - ML - വിവർത്തനം</option>
+                <option value="language">বাংলা - BN - অনুবাদ</option>
+                <option value="language">मराठी - MR - भाषांतर</option>
+            </select>
+            <a href="Signin.html" target="_self">Sign in</a>
+            <a href="#">Return & order</a>
+            <a href="#">Cart</a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a id="menu" href="#"><b> ☰ All</b></a></li>
+                <li><a href="#">Amazon miniTV</a></li>
+                <li><a
+                        href="#">Sell</a>
+                </li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Today's Deals</a></li>
+                <li><a
+                        href="#">Mobiles</a>
+                </li>
+                <li><a
+                        href="#">Electronics</a>
+                </li>
+                <li><a href="#">Prime</a></li>
+                <li><a href="#">Gift Ideas</a>
+                </li>
+                <li><a href="#">Customer
+                        Service</a></li>
+                <li><a href="#">New Releases</a></li>
+                <li><a href="#">Home &
+                        Kitchen</a></li>
+            </ul>
+            <ul>
+                <li><a style="font-size: 25px; font-weight: bolder;letter-spacing: 1.5px;" href="#">Join PRIME Now</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="slide-container">
+                <img class="slide" src="images/01.jpg" alt="">
+                <img class="slide" src="images/02.jpg" alt="">
+                <img class="slide" src="images/03.jpg" alt="">
+                <img class="slide" src="images/04.jpg" alt="">
+                <img class="slide" src="images/05.jpg" alt="">
+                <img class="slide" src="images/06.jpg" alt="">
+            <div class="arrow left">&#x226A;</div>
+            <div class="arrow right">&#8811;</div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">Starting ₹79 | Home decor and furnishings
+                <div id="innerContainer">
+                    <div><img src="images/1_.jpg" alt="">
+                        <p>Curtains, carpets and more</p>
+                    </div>
+                    <div><img src="images/3.jpg" alt="">
+                        <p>Storage boxes, drawers and more</p>
+                    </div>
+                    <div><img src="images/2.jpg" alt="">
+                        <p>Showpieces, idols and more</p>
+                    </div>
+                    <div><img src="images/4.jpg" alt="">
+                        <p>Lighting for Home</p>
+                    </div>
+                    <div class="text"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+            <div class="container">Deals on smartphones that suits your budget
+                <div id="innerContainer">
+                    <div><img src="images/5.jpg" alt="">
+                        <p>Budget | Under ₹10,000 mobiles</p>
+                    </div>
+                    <div><img src="images/6.jpg" alt="">
+                        <p>Mid range | ₹10,000 - ₹25,000</p>
+                    </div>
+                    <div><img src="images/7.jpg" alt="">
+                        <p>Premium | ₹25,000 - ₹40,000</p>
+                    </div>
+                    <div><img src="images/8.jpg" alt="">
+                        <p>Ultra premium | Above ₹40,000</p>
+                    </div>
+                    <div class="text"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+            <div class="container">Welcome offers just for you
+                <div id="inner-Container">
+                    <div><img src="images/99.JPG" alt=""></div>
+                    <div class="text1"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+            <div class="container">Sign in for your best experience<button class="signin">Sign in securely</button>
+                <div id="inner-Container">
+                    <div id="btn-img"><img src="images/27.jpg" alt=""></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">Up to 65% off | Deals on wide range of TVs
+                <div id="innerContainer">
+                    <div><img src="images/11.jpg" alt="">
+                        <p>Budget TVs | Starting ₹5,499</p>
+                    </div>
+                    <div><img src="images/13.jpg" alt="">
+                        <p>4K TVs | Up to 18 months No Cost EMI</p>
+                    </div>
+                    <div><img src="images/12.jpg" alt="">
+                        <p>Big Screens | Save up to ₹30,000</p>
+                    </div>
+                    <div><img src="images/14.jpg" alt="">
+                        <p>Ultra Premium TVs | Flat 50% off</p>
+                    </div>
+                    <div class="text"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+
+            <div class="container">Up to 65% off | Bestselling appliances for your home
+                <div id="innerContainer">
+                    <div><img src="images/19.jpg" alt="">
+                        <p>Refrigerators | Up to 60% off</p>
+                    </div>
+                    <div><img src="images/20.jpg" alt="">
+                        <p>Washing machines | Up to 60% off</p>
+                    </div>
+                    <div><img src="images/21.jpg" alt="">
+                        <p>Air conditioners AC | Up to 55% off</p>
+                    </div>
+                    <div><img src="images/22.jpg" alt="">
+                        <p>Microwaves | Up to 60% off</p>
+                    </div>
+                    <div class="text"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+
+            <div class="container">Up to 75% off | Electronics & accessories
+                <div id="innerContainer">
+                    <div><img src="images/15.jpg" alt="">
+                        <p>Up to 60% off | Appliances and Electronics</p>
+                    </div>
+                    <div><img src="images/16.jpg" alt="">
+                        <p> Up to 40% off | Furniture</p>
+                    </div>
+                    <div><img src="images/17.jpg" alt="">
+                        <p>Up to 50% off | Home decor</p>
+                    </div>
+                    <div><img src="images/18.jpg" alt="">
+                        <p>Up to 70% off | Kitchen</p>
+                    </div>
+                    <div class="text"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+            <div class="container">Minimum 60% off | Deals on Amazon brands & more
+                <div id="innerContainer">
+                    <div><img src="images/23.jpg" alt="">
+                        <p>Starting 129 | Home décor & lighting</p>
+                    </div>
+                    <div><img src="images/24.jpg" alt="">
+                        <p>Minimum 50% off | Kitchen products</p>
+                    </div>
+                    <div><img src="images/25.jpg" alt="">
+                        <p>Starting ₹99 | Toys & games</p>
+                    </div>
+                    <div><img src="images/26.jpg" alt="">
+                        <p>Minimum 60% off | Jackets & sweatshirts</p>
+                    </div>
+                    <div class="text"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="box">Blockbuster deals| Deals on Amazon brands & more
+                <span class="text1"><a href="#">See all offers</a></span>
+                <div class="inner-Containers">
+                    <div><img src="images/70.jpg" alt="">
+                        <span>
+                            <p>Upto 39% off</p>
+                        </span>
+                        <p>Samsung Galaxy M14 | Lowest Ever Price
+                            Up to 39% off</p>
+                    </div>
+                    <div><img src="images/71.jpg" alt="">
+                        <span>
+                            <p>Upto 58% off</p>
+                        </span>
+                        <p>Starting at 999 - smartwatches from Noise,</p>
+                    </div>
+                    <div><img src="images/72.jpg" alt="">
+                        <span>
+                            <p>Upto 16% off</p>
+                        </span>
+                        <p>Top Headsets from Oneplus, Samsung,</p>
+                    </div>
+                    <div><img src="images/73.jpg" alt="">
+                        <span>
+                            <p>Upto 23% off</p>
+                        </span>
+                        <p>Starting from 7499 including additional </p>
+                    </div>
+                    <div><img src="images/74.jpg" alt="">
+                        <span>
+                            <p>Upto 37% off</p>
+                        </span>
+                        <p>Branded Suitcase Trolleys & Sets - American Tourister, Safari, Skybags, etc.</p>
+                    </div>
+                    <div><img src="images/75.jpg" alt="">
+                        <span>
+                            <p>Upto 50% off</p>
+                        </span>
+                        <p>The Biggest Deal on the best selling Models</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section>
+            <div class="box">Starting ₹999 | Bestselling smartwatches from top brands
+                <span class="text1"><a href="#">See all offers</a></span>
+                <div class="inner-Containers">
+                    <div><img src="images/80.jpg" alt="">
+
+                    </div>
+                    <div><img src="images/81.jpg" alt="">
+
+                    </div>
+                    <div><img src="images/82.jpg" alt="">
+
+                    </div>
+                    <div><img src="images/83.jpg" alt="">
+
+                    </div>
+                    <div><img src="images/84.jpg" alt="">
+
+                    </div>
+                    <div><img src="images/85.jpg" alt="">
+
+                    </div>
+                    <div><img src="images/86.jpg" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="box">Starting ₹999 | Bestselling smartwatches from top brands
+                <span class="text1"><a href="#">See all offers</a></span>
+                <div class="inner-Containers">
+                    <div><img src="images/60.jpg" alt="">
+                        <span>
+                            <p>Upto 15% off</p>
+                        </span>
+                    </div>
+                    <div><img src="images/61.jpg" alt="">
+                        <span>
+                            <p>Upto 20% off</p>
+                        </span>
+                    </div>
+                    <div><img src="images/62.jpg" alt="">
+                        <span>
+                            <p>Upto 17% off</p>
+                        </span>
+                    </div>
+                    <div><img src="images/63.jpg" alt="">
+                        <span>
+                            <p>Upto 40% off</p>
+                        </span>
+                    </div>
+                    <div><img src="images/64.jpg" alt="">
+                        <span>
+                            <p>Upto 5% off</p>
+                        </span>
+                    </div>
+                    <div><img src="images/65.jpg" alt="">
+                        <span>
+                            <p>Upto 10% off</p>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="box"><img src="images/Flight_GW_editorial_2300x646._CB584276567_.jpg" alt="">
+        </section>
+        <section>
+            <div class="container">Up to 70% off | Refurbished Products
+                <div id="innerContainer">
+                    <div><img src="images/35.jpg" alt="">
+                        <p>Sports shoes | Footwears</p>
+                    </div>
+                    <div><img src="images/36.jpg" alt="">
+                        <p> Jewellery & accessories</p>
+                    </div>
+                    <div><img src="images/37.jpg" alt="">
+                        <p>Watches & smartwatches</p>
+                    </div>
+                    <div><img src="images/38.jpg" alt="">
+                        <p>Bags, wallets & luggage</p>
+                    </div>
+                    <div class="text"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+            <div class="container">No Cost EMI up to 18 months | TVs for every budget
+                <div id="innerContainer">
+                    <div><img src="images/39.jpg" alt="">
+                        <p>TVs under ₹15,000 | Up to 50% off</p>
+                    </div>
+                    <div><img src="images/40.jpg" alt="">
+                        <p>TVs in price range of ₹15,000 - ₹30,000</p>
+                    </div>
+                    <div><img src="images/41.jpg" alt="">
+                        <p>TVs in price range of ₹30,000 - ₹50,000</p>
+                    </div>
+                    <div><img src="images/42.jpg" alt="">
+                        <p> TVs above ₹50,000 | Up to 65% off</p>
+                    </div>
+                    <div class="text"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+            <div class="container">Buy 2 Get 10% off, freebies
+                <div id="inner-Container">
+                    <div><img src="images/27.jpg" alt=""></div>
+                    <div class="text1"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+            <div class="container">Up to 70% off
+                <div id="inner-Container">
+                    <div><img src="images/28.jpg" alt=""></div>
+                    <div class="text1"><a href="#">See all offers</a></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="box">Starting ₹99 + 20% cashback on first order | Beauty & makeup
+                <span class="text1"><a href="#">See all offers</a></span>
+                <div class="inner-Containers">
+                    <div><img src="images/50.jpg" alt=""></div>
+                    <div><img src="images/51.jpg" alt=""></div>
+                    <div><img src="images/52.jpg" alt=""></div>
+                    <div><img src="images/53.jpg" alt=""></div>
+                    <div><img src="images/54.jpg" alt=""></div>
+                    <div><img src="images/55.jpg" alt=""></div>
+                </div>
+        </section>
+        <section>
+            <div class="scrollImages">
+                <div class="image-container">
+                    <img src="images/90.jpg" alt="">
+                    <img src="images/93.jpg" alt="">
+                    <img src="images/95.jpg" alt="">
+                    <img src="images/91.jpg" alt="">
+                    <img src="images/94.jpg" alt="">
+                    <img src="images/96.jpg" alt="">
+                    <img src="images/92.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="one">
+                <p>See personalized recommendations</p>
+                <button class="signin" style="font-size: 12px;">Sign in</button>
+                <p style="font-size: 11px;">New customer? <a style="text-decoration: none;" href="#">Start here.</a></p>
+            </div>
+            <div class="two"><a href="#">Back to top</a>
+            </div>
+            <div class="three">
+                <ul>
+                    <li><a style="font-size: 15px;" href="#"><b>Get to Know Us</b></a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Press Releases</a></li>
+                    <li><a href="#">Amazon Science</a></li>
+                </ul>
+                <ul>
+                    <li><a style="font-size: 15px;" href="#"><b>Connect with Us</b></a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+                <ul>
+                    <li><a style="font-size: 15px;" href="#"><b>Make Money with Us</b></a></li>
+                    <li><a href="#">Sell on Amazon</a></li>
+                    <li><a href="#">Sell under Amazon Accelerator</a></li>
+                    <li><a href="#">Protect and Build Your Brand</a></li>
+                    <li><a href="#">Amazon Global Selling</a></li>
+                    <li><a href="#">Become an Affiliate</a></li>
+                    <li><a href="#">Fulfilment by Amazon</a></li>
+                    <li><a href="#">Advertise Your Products</a></li>
+                    <li><a href="#">Amazon Pay on Merchants</a></li>
+                </ul>
+                <ul>
+                    <li><a style="font-size: 15px;" href="#"><b>Let Us Help You</b></a></li>
+                    <li><a href="#">COVID-19 and Amazon</a></li>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Returns Centre</a></li>
+                    <li><a href="#">100% Purchase Protection</a></li>
+                    <li><a href="#">Amazon App Download</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+            <hr>
+            <section id="footerSection">
+                <select name="option" id="option">
+                    <option value="language">English - EN</option>
+                    <option value="language">हिन्दी - HI - अनुवाद</option>
+                    <option value="language">தமிழ் - TA - மொழிபெயர்ப்பு</option>
+                    <option value="language">తెలుగు - TE - అనువాదం</option>
+                    <option value="language">ಕನ್ನಡ - KN - ಭಾಷಾಂತರ</option>
+                    <option value="language">മലയാളം - ML - വിവർത്തനം</option>
+                    <option value="language">বাংলা - BN - অনুবাদ</option>
+                    <option value="language">मराठी - MR - भाषांतर</option>
+                </select>
+                <ul>
+                    <li><a href="#">Australia</a></li>
+                    <li><a href="#">Brazil</a></li>
+                    <li><a href="#">Canada</a></li>
+                    <li><a href="#">China</a></li>
+                    <li><a href="#">France</a></li>
+                    <li><a href="#">Germany</a></li>
+                    <li><a href="#">Italy</a></li>
+                    <li><a href="#">Japan</a></li>
+                    <li><a href="#">Mexico</a></li>
+                    <li><a href="#">Netherlands</a></li>
+                    <li><a href="#">Poland</a></li>
+                    <li><a href="#">Singapore</a></li>
+                    <li><a href="#">Spain</a></li>
+                    <li><a href="#">Turkey</a></li>
+                    <li><a href="#">United Arab Emirates</a></li>
+                    <li><a href="#">United Kingdom</a></li>
+                    <li><a href="#">United States</a></li>
+                </ul>
+            </section>
+            <div id="contact">
+                <div id="services">
+                    <ul>
+                        <li><a href="#"><b>AbeBooks</b></a></li>
+                        <li><a href="#">Books, art</a></li>
+                        <li><a href="#">& collectibles</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><b>Amazon Web Services</b></a></li>
+                        <li><a href="#">Scalable Cloud</a></li>
+                        <li><a href="#">Computing Services</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><b>Audible</b></a></li>
+                        <li><a href="#">Download</a></li>
+                        <li><a href="#">Audio Books</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><b>IMDb</b></a></li>
+                        <li><a href="#">Movies, TV</a></li>
+                        <li><a href="#">& Celebrities</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><b>Shopbop</b></a></li>
+                        <li><a href="#">Designer</a></li>
+                        <li><a href="#">Fashion Brands</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><b>Amazon Business</b></a></li>
+                        <li><a href="#">Everything For</a></li>
+                        <li><a href="#">Your Business</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><b>Prime Now</b></a></li>
+                        <li><a href="#">2-Hour Delivery</a></li>
+                        <li><a href="#">on Everyday Items</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#"><b>Prime Now</b></a></li>
+                        <li><a href="#">2-Hour Delivery</a></li>
+                        <li><a href="#">on Everyday Items</a></li>
+                    </ul>
+                </div>
+                <div id="links">
+                    <a href="#">Conditions of Use & Sale</a>
+                    <a href="#">Privacy Notice</a>
+                    <a href="#">Interest-Based Ads</a>
+                    <a href="#">© 1996-2024, Amazon.com, Inc. or its affiliates</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+<script src="index.js"></script>
+
+</html>

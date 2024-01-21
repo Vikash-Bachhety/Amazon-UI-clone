@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Sign In</title>
+    <link rel="icon" href="images/Favicon.jpg">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #toplogo {
+            position: relative;
+            height: 150px;
+            width: 200px;
+        }
+
+        #toplogo img {
+            position: absolute;
+            top: -35px;
+            height: 130px;
+            width: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        #formContainer {
+            position: relative;
+            top: -80px;
+            height: 320px;
+            width: 300px;
+            border: 1px #ddd solid;
+            border-radius: 5px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+            gap: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            width: 275px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #a6a6a6;
+            padding: 0px 10px;
+        }
+
+        #signinbtn {
+            width: 295px;
+            height: 30px;
+            text-align: center;
+            border-radius: 5px;
+            color: #111111;
+            background-color: #ffd814;
+            border-color: #a88734 #9c7e31 #846a29;
+            border: none;
+        }
+        #signinbtn:hover {
+            background-color: #ffd500;
+        }
+
+        p a {
+            text-decoration: none;
+            font-size: 13px;
+            color: #0066c0;
+        }
+
+        #create {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 360px;
+            position: relative;
+            top: -60px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #createacnt {
+            height: 30px;
+            background-color: white;
+            margin-top: 10px;
+            width: 360px;
+            border-radius: 5px;
+            border: 1px #ddd solid;
+            font-size: 13px;
+        }
+        #createacnt:hover {
+            background-color: #fbfbfb;
+        }
+        #footerdiv {
+            display: flex;
+            width: 250px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 11px;
+        }
+        .conditions {
+            display: flex;
+            font-family: Arial, Helvetica, sans-serif;
+            gap: 20px;
+        }
+        .conditions a {
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            color: #0066c0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="toplogo"><img src="images/form logo.png" alt=""></div>
+    <div id="formContainer">
+        <div>
+            <h1 style="font-size: 28px; font-weight: 200; color: #111111;">Sign in</h1>
+        </div>
+        <div>
+            <p style="font-size: 13px; color: #111111;"><b>Email or mobile phone number</b></p>
+        </div>
+        <div><input id="inputtext" type="text"></div>
+        <div><button id="signinbtn">Continue</button></div>
+        <div>
+            <p style="font-size: 12px;">By continuing, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy
+                    Notice.</a></p>
+        </div>
+        <div>
+            <p><a href="#">Need help?</a></p>
+        </div>
+        <div>
+            <p style="font-size: 13px; color: #111111; font-weight: 200; "><b>Buying for work?</b></p>
+            <p><a href="#">Shop on Amazon Business</a></p>
+        </div>
+        <div></div>
+    </div>
+    <div id="create">
+        <p style="font-size: 12px;">New to Amazon?</p>
+        <hr>
+        <button id="createacnt">Create your Amazon account</button>
+    </div>
+    <div id="footerdiv">
+    <div class="conditions"><a href="#">Conditions of Use</a><a href="#">Privacy Notice</a><a href="#"> Help </a></div>
+    <div><p style="font-family: Arial, Helvetica, sans-serif; color: #535353;">© 1996-2024, Amazon.com, Inc. or its affiliates</p></div>
+</div>
+<script>
+    let loginBtn = document.getElementById("signinbtn");
+    let input = document.getElementById("inputtext");
+
+    loginBtn.addEventListener("click", function() {
+            let inputValue = input.value.trim();
+            let isValidInput = /^[a-zA-Z0-9@.]+$/.test(inputValue);
+
+            if (!isValidInput) {
+                alert("Enter a valid email or phone (only text and numbers allowed)");
+            }
+    });
+</script>
+
+</body>
+
+</html>
